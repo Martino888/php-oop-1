@@ -7,7 +7,7 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà -->
 
 <?php
-    class Movie{
+    class movie{
         protected $title;
         protected $lenguage;
         protected $duration;
@@ -82,7 +82,29 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 <body>
 
 <div class="container">
-<h1>Movie</h1>
+<h1>
+
+<?php
+    $movies = [];
+    array_push($movies, new Movie("titolo", "IT", "111:22", "fantasy", "2025"));
+    array_push($movies, new Movie());
+    array_push($movies, new Movie());
+    array_push($movies, new Movie());
+    array_push($movies, new Movie());
+
+
+    foreach($movies as $movie){
+        echo "<ul>";
+        echo "<li>Title: ".$movie->getTitle()."</li>";
+        echo "<li>Duration ".$movie->getLenguage()."</li>";
+        echo "<li>Genre: ".$movie->getDuration()."</li>";
+        echo "<li>Language: ".$movie->getGenre()."</li>";
+        echo "<li>Language: ".$movie->getDate()."</li>";
+        echo "</ul>";
+
+?>
+
+</h1>
 </div>
 
 </body>
