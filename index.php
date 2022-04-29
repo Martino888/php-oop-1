@@ -14,7 +14,7 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
         protected $genre;
         protected $date;
 
-        function __construct($_title, $lenguage, $duration, $genre, $date)
+        function __construct($_title, $_lenguage, $_duration, $_genre, $_date)
         {
             $this->title = $_title;
             $this->lenguage = $_lenguage;
