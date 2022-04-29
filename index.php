@@ -82,29 +82,28 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 <body>
 
 <div class="container">
-<h1>
 
 <?php
     $movies = [];
     array_push($movies, new Movie("titolo", "IT", "111:22", "fantasy", "2025"));
-    array_push($movies, new Movie());
-    array_push($movies, new Movie());
-    array_push($movies, new Movie());
-    array_push($movies, new Movie());
+    array_push($movies, new Movie("titolo1", "IT", "111:22", "fantasy", "2025"));
+    array_push($movies, new Movie("titolo2", "IT", "111:22", "fantasy", "2025"));
+    array_push($movies, new Movie("titolo3", "IT", "111:22", "fantasy", "2025"));
+    array_push($movies, new Movie("titolo4", "IT", "111:22", "fantasy", "2025"));
 
 
     foreach($movies as $movie){
         echo "<ul>";
         echo "<li>Title: ".$movie->getTitle()."</li>";
-        echo "<li>Duration ".$movie->getLenguage()."</li>";
-        echo "<li>Genre: ".$movie->getDuration()."</li>";
-        echo "<li>Language: ".$movie->getGenre()."</li>";
-        echo "<li>Language: ".$movie->getDate()."</li>";
+        echo "<li>Lenguage ".$movie->getLenguage()."</li>";
+        echo "<li>Duration: ".$movie->getDuration()."</li>";
+        echo "<li>Genre: ".$movie->getGenre()."</li>";
+        echo "<li>Date: ".$movie->getDate()."</li>";
         echo "</ul>";
+    }
 
 ?>
 
-</h1>
 </div>
 
 </body>
