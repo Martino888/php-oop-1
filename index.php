@@ -85,20 +85,20 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 
 <?php
     $movies = [];
-    array_push($movies, new Movie("titolo", "IT", "111:22", "fantasy", "2025"));
-    array_push($movies, new Movie("titolo1", "IT", "111:22", "fantasy", "2025"));
-    array_push($movies, new Movie("titolo2", "IT", "111:22", "fantasy", "2025"));
-    array_push($movies, new Movie("titolo3", "IT", "111:22", "fantasy", "2025"));
-    array_push($movies, new Movie("titolo4", "IT", "111:22", "fantasy", "2025"));
+    array_push($movies, new Movie("The Batman", "IT", "175'", "AZIONE", "(2022)"));
+    array_push($movies, new Movie("Pastori e macellai", "IT", "106'", "DRAMMATICO", "(2016)"));
+    array_push($movies, new Movie("Uncharted", "IT", "122'", "AVVENTURA", "(2022)"));
+    array_push($movies, new Movie("Eternals", "IT", "156'", "FANTASCIENZA", "(2021)"));
+    array_push($movies, new Movie("La torre", "IT", "83'", "HORROR", "(2005)"));
 
 
     foreach($movies as $movie){
         echo "<ul>";
-        echo "<li>Title: ".$movie->getTitle()."</li>";
-        echo "<li>Lenguage ".$movie->getLenguage()."</li>";
-        echo "<li>Duration: ".$movie->getDuration()."</li>";
-        echo "<li>Genre: ".$movie->getGenre()."</li>";
-        echo "<li>Date: ".$movie->getDate()."</li>";
+        echo "<li><h4>Title</h4>: ".$movie->getTitle()."</li>";
+        echo "<li><h4>Lenguage</h4>: ".$movie->getLenguage()."</li>";
+        echo "<li><h4>Duration</h4>: ".$movie->getDuration()."</li>";
+        echo "<li><h4>Genre</h4>: ".$movie->getGenre()."</li>";
+        echo "<li><h4>Date</h4>: ".$movie->getDate()."</li>";
         echo "</ul>";
     }
 
